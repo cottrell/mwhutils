@@ -3,9 +3,9 @@ Sample from low-discrepancy sequences.
 """
 
 # future imports
-from __future__ import division
-from __future__ import absolute_import
-from __future__ import print_function
+
+
+
 
 # local imports
 from ._sobol import i4_sobol_generate
@@ -65,7 +65,7 @@ def latin(bounds, n, rng=None):
     X = bounds[:, 0] + w * (np.arange(n)[:, None] + rng.rand(n, d)) / n
 
     # shuffle each dimension.
-    for i in xrange(d):
+    for i in range(d):
         X[:, i] = rng.permutation(X[:, i])
 
     return X

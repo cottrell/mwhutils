@@ -2,9 +2,9 @@
 ABC tests.
 """
 
-from __future__ import division
-from __future__ import absolute_import
-from __future__ import print_function
+
+
+
 
 import numpy.testing as nt
 import mwhutils.abc as abc
@@ -13,10 +13,8 @@ import mwhutils.abc as abc
 def test_abc():
     """Test creation of an abstract base class."""
 
-    class FooBase(object):
+    class FooBase(object, metaclass=abc.ABCMeta):
         """Base class."""
-
-        __metaclass__ = abc.ABCMeta
 
         def method(self):
             """Method"""
